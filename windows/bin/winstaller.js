@@ -7,7 +7,9 @@ const options = {
   productDescription: 'Headset is a desktop app that turns YouTube into a world class music streaming service.' +
     'Create collections, tune-in to a music subreddit or quickly play that song ' +
     'you’ve had stuck in your head all day!',
-  icon: path.resolve(__dirname, '../Headset.ico'),
+  icon: 'Headset.ico',
+  noMsi: true,
+  tags: ['headset', 'youtube', 'player', 'radio', 'music'],
   iconUrl: 'https://raw.githubusercontent.com/headsetapp/headset-electron/master/windows/Headset.ico',
   licenseUrl: 'https://raw.githubusercontent.com/headsetapp/headset-electron/master/LICENSE',
 };
