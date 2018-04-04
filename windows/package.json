@@ -14,7 +14,8 @@
     "production-like": "NODE_ENV=production electron .",
     "pack": "electron-packager . --executable-name headset --overwrite --platform=win32 --asar --arch=ia32 --prune --ignore=\"(bin|Procfile)\" --out=build --icon=Headset.ico --version-string.ProductName=\"Headset\"",
     "dist": "node bin/winstaller.js",
-    "build": "npm run pack && npm run dist"
+    "build": "npm run pack && npm run dist",
+    "choco": "@powershell ./bin/choco.ps1 -version %npm_package_version%"
   },
   "dependencies": {
     "debug": "^3.1.0",
