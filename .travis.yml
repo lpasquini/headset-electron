@@ -46,9 +46,7 @@ script:
 
 cache:
   directories:
-  - node_modules
-  - darwin/node_modules
-  - linux/node_modules
+  - "$HOME/.npm"
 
 after_success:
 - if [[ "$TRAVIS_OS_NAME" == "linux" && -n "$TRAVIS_TAG" ]]; then
