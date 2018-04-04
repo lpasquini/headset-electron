@@ -1,5 +1,4 @@
 const installer = require('electron-installer-windows');
-const path = require('path');
 
 const options = {
   src: 'build/Headset-win32-ia32',
