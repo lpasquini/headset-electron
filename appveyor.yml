@@ -7,9 +7,9 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm i -g  npm@5.6.0
-  - npm install
-  - cd windows && npm install && cd..
+  - npm i -g npm@5.8.0
+  - npm ci
+  - cd windows && npm ci && cd..
 
 before_build:
   - npm run lint windows
@@ -17,6 +17,7 @@ before_build:
 build_script:
   - cd windows
   - npm run build
+  - npm run choco
 
 test_script:
   - cd ..
@@ -30,6 +31,8 @@ cache:
 artifacts:
   - path: windows\build\installers\*.exe
     name: HeadsetApp
+  - path: windows\build\*.nupkg
+    name: HeadsetChoco
 
 deploy:
   - provider: GitHub
