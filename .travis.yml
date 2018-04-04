@@ -27,7 +27,7 @@ before_install:
 install:
 - npm ci
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cd linux && npm ci && cd ..; fi
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd darwin && npm ci && cd ..; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd darwin && npm i && cd ..; fi
 
 before_script:
 - ./bin/travis_eslint.sh
